@@ -1,9 +1,7 @@
+import NavBar from './topbar/NavBar';
+
 function App() {
-	return (
-		<div className="App">
-			<h1 />
-		</div>
-	);
+	return <NavBar />;
 }
 
 export default App;
