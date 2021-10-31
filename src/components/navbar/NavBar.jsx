@@ -7,6 +7,7 @@ export default function NavBar() {
                 <i className="navIcon fab fa-facebook-square"></i>
                 <i className="navIcon fab fa-twitter-square"></i>
                 <i className="navIcon fab fa-instagram-square"></i>
+                <i className="navIcon fab fa-pinterest-square"></i>
             </div>
             <div className="navCenter">
                 <ul className="navList">
