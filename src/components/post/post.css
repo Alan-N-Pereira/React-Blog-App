@@ -1,6 +1,10 @@
 .post {
-	width: 385px;
-	margin: 0 25px 40px 25px;
+	width: 500px;
+	margin: 80px 25px 25px 25px;
+	padding: 20px;
+	padding-top: 30px;
+	background: #fbfbfb;
+	border-radius: 10px;
 }
 
 .postImg {
