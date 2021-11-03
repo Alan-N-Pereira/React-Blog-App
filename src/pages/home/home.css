@@ -1,4 +1,7 @@
 .home {
 	display: flex;
 	background: #d8b6a4;
+	flex-wrap: wrap;
+	padding-top: 80px;
+	padding-bottom: 30px;
 }

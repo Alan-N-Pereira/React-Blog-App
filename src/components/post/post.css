@@ -1,10 +1,10 @@
 .post {
 	width: 500px;
-	margin: 80px 25px 25px 25px;
-	padding: 20px;
-	padding-top: 30px;
+	margin: 0 25px 25px 25px;
+	padding: 30px;
 	background: #fbfbfb;
 	border-radius: 10px;
+	box-shadow: 0 2px 2px 0 rgb(0 0 0 / 14%), 0 3px 1px -2px rgb(0 0 0 / 20%), 0 1px 5px 0 rgb(0 0 0 / 12%);
 }
 
 .postImg {
@@ -12,6 +12,8 @@
 	height: 280px;
 	object-fit: cover;
 	border-radius: 5px;
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+	margin-bottom: 10px;
 }
 
 .postInfo {

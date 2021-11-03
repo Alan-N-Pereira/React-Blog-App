@@ -17,12 +17,14 @@
 	position: absolute;
 	top: 23%;
 	font-size: 20px;
+	text-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .headerTitleLg {
 	position: absolute;
 	top: 25%;
 	font-size: 100px;
+	text-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .headerImg {
@@ -38,13 +40,14 @@
 	top: 48%;
 	font-size: 14px;
 	padding: 10px 16px;
-	background: #d8b6a4;
+	background: #73635d;
 	color: #eeebdd;
 	border-style: none;
 	border-radius: 20px;
 	outline: none;
 	font-family: 'Josefin Sans', sans-serif;
 	cursor: pointer;
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .headerCircle {
