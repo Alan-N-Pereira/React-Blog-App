@@ -47,3 +47,15 @@
 	font-size: 16px;
 	color: #b39656;
 }
+
+.singlePostDesc {
+	color: #666;
+	font-size: 18px;
+	line-height: 25px;
+}
+
+.singlePostDesc::first-letter {
+	margin-left: 20px;
+	font-size: 30px;
+	font-weight: 600;
+}
