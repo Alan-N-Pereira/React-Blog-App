@@ -35,17 +35,23 @@
 	margin-top: 15px;
 	height: 250px;
 	width: 300px;
+	border-radius: 5px;
 	object-fit: cover;
 	object-position: left;
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .sidebarItem > p {
 	padding: 30px;
+	font-family: sans-serif;
+	line-height: 19px;
+	color: #555;
 }
 
 .sidebarList {
 	list-style: none;
 	margin-bottom: 30px;
+	font-family: sans-serif;
 }
 
 .sidebarListItem {
