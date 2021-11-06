@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import './navbar.css'
 
 export default function NavBar() {
@@ -11,15 +12,20 @@ export default function NavBar() {
             </div>
             <div className="navCenter">
                 <ul className="navList">
-                    <li className='navListItem'>HOME</li>
-                    <li className='navListItem'>ABOUT</li>
-                    <li className='navListItem'>CONTACT</li>
-                    <li className='navListItem'>WRITE</li>
-                    <li className='navListItem'>LOGOUT</li>
+                    <li className='navListItem'><Link className="link" to="/">HOME</Link></li>
+                    <li className='navListItem'><Link className="link" to='' onClick={() => {
+                        const anchor = document.querySelector('#about')
+                        anchor.scrollIntoView({ behavior: 'smooth' })
+                        }}>ABOUT</Link></li>
+                    <li className='navListItem'><Link className="link" to="/">CONTACT</Link></li>
+                    <li className='navListItem'><Link className="link" to="write">WRITE</Link></li>
+                    <li className='navListItem'><Link className="link" to="login">LOGOUT</Link></li>
                 </ul>
             </div>
             <div className="navRight">
-                <img className='navImage' src="/images/profile-picture1.jpg" alt="" srcset="" />
+                <Link className="link navImgWrap" to="setting">
+                    <img className='navImage' src="/images/profile-picture1.jpg" alt="" srcset="" />
+                </Link>
                 <i className="navSearch fas fa-search"></i>
             </div>
         </div>

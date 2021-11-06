@@ -7,7 +7,7 @@ export default function Home() {
 	return (
 		<div>
 			<Header />
-			<div className="home">
+			<div className="home" id='about'>
 				<Posts/>
 				<Sidebar/>
 			</div>
