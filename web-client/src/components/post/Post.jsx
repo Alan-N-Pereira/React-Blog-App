@@ -1,20 +1,24 @@
 import './post.css'
+import {Link} from "react-router-dom"
 
-export default function Post() {
+export default function Post({post}) {
     return (
+        
         <div className="post">
-            <img className="postImg" src="/images/post-img.jpg" alt="" />
-            <div className="postInfo">
-                <div className="postCategories">
-                    <span className="postCategory">Music</span>
-                    <span className="postCategory">Life</span>
+            <Link className='link' to={`/post/${post._id}`}>
+                {post.photo && (<img className="postImg" src={post.photo} alt="" />)}
+                <div className="postInfo">
+                    <div className="postCategories">
+                        {post.categories.map((c)=>{
+                            return <span className="postCategory">{c.name}</span>
+                        })}
+                    </div>
+                    <span className="postTitle">{post.title}</span>
+                    <hr />
+                    <span className="postDate">{new Date(post.createdAt).toDateString()}</span>
                 </div>
-                <span className="postTitle">Lorem ipsum dolor sit amet</span>
-                <hr />
-                <span className="postDate">1 hour ago</span>
-            </div>
-            <p className='postDescript'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem voluptatibus quidem voluptatem magni hic a. Similique, officia. Inventore, beatae unde magni, ullam, vel explicabo sequi facilis accusamus aliquam libero voluptate?
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem voluptatibus quidem voluptatem magni hic a. Similique, officia. Inventore, beatae unde magni, ullam, vel explicabo sequi facilis accusamus aliquam libero voluptate?Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem voluptatibus quidem voluptatem magni hic a. Similique, officia. Inventore, beatae unde magni, ullam, vel explicabo sequi facilis accusamus aliquam libero voluptate?</p>
+                <p className='postDescript'>{post.desc}</p>
+            </Link>
         </div>
     )
 }
