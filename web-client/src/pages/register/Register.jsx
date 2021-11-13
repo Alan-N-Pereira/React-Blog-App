@@ -1,21 +1,41 @@
+import axios from 'axios';
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import './register.css'
 
 export default function Register() {
+    const [username, setUsername] = useState('');
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+
+    const handleSubmit = async (e)=>{
+        e.preventDefault();
+        try{
+
+            const res = await axios.post('/auth/register', {
+                username,
+                email,
+                password
+            })
+            res.data && window.location.replace('/login')
+        }catch(err){
+            console.log(err)
+        }
+    }
     return (
         <div className='register'>
             <div className="registerWrapper">
                 <span className="registerTitle">Register</span>
-                <form action="" className="registerForm">
+                <form action="" className="registerForm" onSubmit={handleSubmit}>
                     <label htmlFor="">Username</label>
-                    <input type="text" placeholder='Enter your username' />
+                    <input type="text" placeholder='Enter your username' onChange={e=>setUsername(e.target.value)} />
                     <label htmlFor="">Email</label>
-                    <input type="email" placeholder='Enter your email' />
+                    <input type="email" placeholder='Enter your email' onChange={e=>setEmail(e.target.value)}/>
                     <label htmlFor="">Password</label>
-                    <input type="Password" placeholder='Enter your password' />
+                    <input type="Password" placeholder='Enter your password' onChange={e=>setPassword(e.target.value)}/>
                     <button className="registerButton">Register</button>
                 </form>
-                <button className="registerLoginButton"><Link className='link' to='/login'>Login</Link></button>
+                <button className="registerLoginButton" type='submit'><Link className='link' to='/login'>Login</Link></button>
             </div>
         </div>
     )
