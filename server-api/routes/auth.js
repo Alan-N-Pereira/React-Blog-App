@@ -9,6 +9,16 @@ const router = express.Router();
 
 router.post('/register', async (req, res) => {
 	try {
+		const usernameExist = await User.findOne({ username: req.body.username });
+		if (usernameExist) {
+			return res.status(400).json('Username already taken');
+		}
+
+		const emailExist = await User.findOne({ email: req.body.email });
+		if (emailExist) {
+			return res.status(400).json('Email already exists');
+		}
+
 		const salt = await bcrypt.genSalt(10);
 		const hashPass = await bcrypt.hash(req.body.password, salt);
 

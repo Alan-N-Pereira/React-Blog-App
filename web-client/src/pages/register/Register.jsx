@@ -7,11 +7,13 @@ export default function Register() {
     const [username, setUsername] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [error, setError] = useState(false);
+    const [errorMsg, setErrormsg] = useState('');
 
     const handleSubmit = async (e)=>{
         e.preventDefault();
+        setError(false)
         try{
-
             const res = await axios.post('/auth/register', {
                 username,
                 email,
@@ -19,7 +21,8 @@ export default function Register() {
             })
             res.data && window.location.replace('/login')
         }catch(err){
-            console.log(err)
+            setError(true);
+            setErrormsg(err.response.data)
         }
     }
     return (
@@ -36,6 +39,7 @@ export default function Register() {
                     <button className="registerButton">Register</button>
                 </form>
                 <button className="registerLoginButton" type='submit'><Link className='link' to='/login'>Login</Link></button>
+                {error && <span className='error'><i className="errorIcon fas fa-exclamation-triangle"></i> {errorMsg}</span>}
             </div>
         </div>
     )
