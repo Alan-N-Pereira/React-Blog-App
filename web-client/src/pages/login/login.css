@@ -61,6 +61,11 @@
 	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
+.loginButton:disabled {
+	cursor: not-allowed;
+	background-color: rgb(245, 154, 154);
+}
+
 .loginRegisterButton {
 	position: absolute;
 	top: 20px;
@@ -75,4 +80,16 @@
 	letter-spacing: 2px;
 	outline: none;
 	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.error {
+	width: 100%;
+	margin-top: 30px;
+	color: #d8000c;
+	background-color: #ffd2d2;
+	padding: 10px 20px;
+}
+
+.errorIcon {
+	margin-right: 10px;
 }

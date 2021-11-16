@@ -31,11 +31,11 @@ export default function Register() {
                 <span className="registerTitle">Register</span>
                 <form action="" className="registerForm" onSubmit={handleSubmit}>
                     <label htmlFor="">Username</label>
-                    <input type="text" placeholder='Enter your username' onChange={e=>setUsername(e.target.value)} />
+                    <input type="text" placeholder='Enter your username' required={true} onChange={e=>setUsername(e.target.value)} />
                     <label htmlFor="">Email</label>
-                    <input type="email" placeholder='Enter your email' onChange={e=>setEmail(e.target.value)}/>
+                    <input type="email" placeholder='Enter your email' required={true} onChange={e=>setEmail(e.target.value)}/>
                     <label htmlFor="">Password</label>
-                    <input type="Password" placeholder='Enter your password' onChange={e=>setPassword(e.target.value)}/>
+                    <input type="Password" placeholder='Enter your password' required={true} onChange={e=>setPassword(e.target.value)}/>
                     <button className="registerButton">Register</button>
                 </form>
                 <button className="registerLoginButton" type='submit'><Link className='link' to='/login'>Login</Link></button>
