@@ -4,6 +4,7 @@ import { Context } from '../../context/Context'
 import './navbar.css'
 
 export default function NavBar() {
+    const PF = 'http://localhost:8000/images/'
     const {user,dispatch} = useContext(Context)
     const handleLogout = ()=>{
         dispatch({type:"LOGOUT"})
@@ -41,7 +42,7 @@ export default function NavBar() {
             <div className="navRight">
                    { user &&
                         <Link className="link navImgWrap" to="setting">
-                            <img className='navImage' src={user.profilePic} alt="" srcset="" />
+                            <img className='navImage' src={PF+user.profilePic} alt="" srcset="" />
                         </Link>
                     }
 
