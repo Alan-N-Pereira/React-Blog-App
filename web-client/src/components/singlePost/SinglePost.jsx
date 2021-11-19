@@ -44,8 +44,8 @@ export default function SinglePost() {
                 desc
             });
             setUpdateMode(false)
-        } catch (error) {
-            
+        } catch (err) {
+            console.log(err)
         }
     };
 

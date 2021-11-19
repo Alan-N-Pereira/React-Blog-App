@@ -89,3 +89,15 @@
 	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 	cursor: pointer;
 }
+
+.success {
+	width: 100%;
+	margin-top: 30px;
+	color: #3c763d;
+	background-color: #dff0d8;
+	padding: 10px 20px;
+}
+
+.successIcon {
+	margin-right: 10px;
+}
