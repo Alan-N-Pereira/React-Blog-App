@@ -101,3 +101,21 @@
 .successIcon {
 	margin-right: 10px;
 }
+
+@media only screen and (max-width: 1500px) {
+	.settings {
+		flex-wrap: wrap;
+	}
+	.settingsWrapper {
+		padding-right: 10%;
+		flex: 0 auto;
+		width: 100%;
+		margin-bottom: 100px;
+	}
+}
+
+@media only screen and (max-width: 700px) {
+	.settings {
+		padding-right: 0px;
+	}
+}

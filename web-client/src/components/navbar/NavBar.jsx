@@ -20,9 +20,16 @@ export default function NavBar() {
             <div className="navCenter">
                 <ul className="navList">
                     <li className='navListItem'><Link className="link" to="/">HOME</Link></li>
-                    <li className='navListItem'><Link className="link" to='/' onClick={() => {
-                        const anchor = document.querySelector('#about')
-                        anchor.scrollIntoView({ behavior: 'smooth' })
+                    <li className='navListItem'><Link className="link" to='#about' onClick={() => {
+                        const anchor = document.querySelector('#about');
+                        const anchorPosition = anchor.getBoundingClientRect().top;
+                        const offset = 45;
+                        const offsetPosition = anchorPosition - offset;
+
+                        window.scrollTo({
+                            top: offsetPosition,
+                            behavior: "smooth"
+                       });
                         }}>ABOUT</Link></li>
                 {
                     user ? (
@@ -46,7 +53,7 @@ export default function NavBar() {
                         </Link>
                     }
 
-                <i className="navSearch fas fa-search"></i>
+                {/* <i className="navSearch fas fa-search"></i> */}
             </div>
         </div>
     )

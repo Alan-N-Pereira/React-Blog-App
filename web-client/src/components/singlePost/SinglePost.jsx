@@ -74,7 +74,7 @@ export default function SinglePost() {
                     </span>
                     <span className='singlePostDate'>{new Date(post.createdAt).toDateString()}</span>
                 </div>
-                {updateMode ? (<textarea className='singlePostDescInput' value={desc} onChange={(e)=>setDesc(e.target.value)}/>):(
+                {updateMode ? (<textarea className='singlePostDescInput' cols="30" rows="20" value={desc} onChange={(e)=>setDesc(e.target.value)}/>):(
                     <p className='singlePostDesc'>{desc}</p>
                 )}
                 {updateMode && <button className="singlePostBtn" onClick={handleUpdate}>Update</button>}

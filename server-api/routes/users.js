@@ -10,9 +10,19 @@ const router = express.Router();
 
 router.put('/:id', async (req, res) => {
 	if (req.body.userId === req.params.id) {
+		const user = await User.findById(req.params.id);
 		if (req.body.password) {
 			const salt = await bcrypt.genSalt(10);
 			req.body.password = await bcrypt.hash(req.body.password, salt);
+		}
+		if (!req.body.username) {
+			req.body.username = user.username;
+		}
+		if (!req.body.email) {
+			req.body.email = user.email;
+		}
+		if (!req.body.password) {
+			req.body.password = user.password;
 		}
 		try {
 			const updatedUser = await User.findByIdAndUpdate(

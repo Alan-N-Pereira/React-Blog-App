@@ -13,9 +13,9 @@ export default function Sidebar() {
         getCats();
     },[])
     return (
-        <div className='sidebar'>
+        <div className='sidebar' id='about'>
             <div className="sidebarItem">
-                <span className="sidebarTitle" >ABOUT ME</span>
+                <span className="sidebarTitle" >ABOUT US</span>
                 <img className='sidebarImg' src="/images/about-me.jpg" alt="" srcset="" />
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit aperiam possimus voluptatum velit voluptatibus perspiciatis obcaecati adipisci cupiditate! Expedita dolor a consectetur autem quo molestiae tempore dolorum beatae, animi quidem!</p>
             </div>

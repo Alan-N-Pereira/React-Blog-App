@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom'
 import './register.css'
 
 export default function Register() {
+    const PF = 'http://localhost:8000/images/'
+
     const [username, setUsername] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -17,7 +19,8 @@ export default function Register() {
             const res = await axios.post('/auth/register', {
                 username,
                 email,
-                password
+                password,
+                profilePic: PF+'profile-picture.jpg'
             })
             res.data && window.location.replace('/login')
         }catch(err){

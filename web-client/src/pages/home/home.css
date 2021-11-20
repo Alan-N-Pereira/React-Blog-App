@@ -5,3 +5,10 @@
 	padding-top: 80px;
 	padding-bottom: 30px;
 }
+
+@media only screen and (max-width: 1500px) {
+	.home {
+		justify-content: center;
+		padding-bottom: 0;
+	}
+}

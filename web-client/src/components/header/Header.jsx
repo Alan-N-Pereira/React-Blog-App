@@ -8,7 +8,7 @@ export default function Header() {
 				<span className="headerTitleSm">React & Node</span>
 				<span className="headerTitleLg">Blog</span>
 				<button className="headerBtn" onClick={() => {
-                        const anchor = document.querySelector('#about')
+                        const anchor = document.querySelector('#post')
                         anchor.scrollIntoView({ behavior: 'smooth' })
                         }} >POSTS</button>
 			</div>
