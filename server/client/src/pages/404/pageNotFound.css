@@ -1,0 +1,29 @@
+.pageNotFound {
+	height: calc(100vh - 50px);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	font-family: sans-serif;
+}
+
+.number {
+	font-size: 100px;
+}
+
+.msg {
+	font-size: 60px;
+}
+
+.return {
+	margin-top: 50px;
+	padding: 10px 20px;
+	background-color: #d8b6a4;
+	border-radius: 10px;
+	border: none;
+	cursor: pointer;
+	outline: none;
+	font-size: 20px;
+	color: white;
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
